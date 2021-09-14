@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 80% "Arial", verdana, arial, tahoma, sans-serif;
+    line-height: 1.7em;
+    color: #000;
+    background: #FFFFFF url(img/bg.gif) center repeat-y;
+    }
+    
+    #container {
+    width: 850px;
+    margin: 0 auto;
+    padding: 0;
+    border: 5px solid #fff;
+    }
+    
+    #banner {
+    height:85px;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    background: #3CFF00 url(img/head.jpg) no-repeat;
+    }
+    #banner h1 {
+    margin: 0 0 10px 10px;
+    padding-top: 25px;
+    letter-spacing: 5px;
+    font: 200% verdana, arial, tahoma, sans-serif;
+    color: #b3ff00;
+    background: transparent;
+    }
+    
+    #globalnav {
+    position:relative;
+    float:left;
+    width:850px;
+    padding: 0 0 1em 0;
+    margin:0;
+    list-style:none;
+    line-height:1em;
+    }
+    #globalnav li {
+    float:left;
+    margin:0;
+    padding:0;
+    }
+    #globalnav a {
+    display:block;
+    margin:0;
+    padding:0.8em 3.5em;
+    text-decoration:none;
+    font-weight:bold;
+    border-left:5px solid #fff;
+    border-top:5px solid #D6FFC2;
+    border-right:8px solid #aaa;
+    color:#000000;
+    background:#74FF00;
+    }
+    #globalnav a:hover, #globalnav a:active, #globalnav a.here:link, #globalnav .here:visited {
+    background:#6AA3C1;
+    color: #fff;
+    }
+    #globalnav a.here:link, #globalnav a.here:visited {
+    position:relative;
+    z-index:102;
+    }
+    h2{
+    font-size: 130%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+    color:  #bbff00;
+    background: inherit;
+    }
+    .body{
+    padding-left: 1cm;
+    background: radial-gradient(left bottom, circle farthest-side, #f7ff08 0%, #21ad11 50%, #00a3ef 80%);                
+    }
+    .button{
+    margin-left: 45%;    
+    }
+    td{
+    padding-left: .45cm;
+    }
+    .tabla{
+    font-size: 150%;
+    border-collapse: collapse;
+    border: 1px solid #6fa6c3;
+    text-align: center;
+    }
+    .tabla th{
+    color:  #99d313ab;
+    border: 1px solid #37ca2a;
+    }
+    .tabla td{
+    padding-left: 0;
+    border: 1px solid #6fa6c3;	
+    }
+    img.aperture{
+                height: 80px;
+    }
