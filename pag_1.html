@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <link rel="shortcut icon" href="assets/images/245px-aperture-laboratories-logo.svg.png" type="image/x-icon">
+        
+        
+        <title>Home</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+
+    </head>
+    <body>
+        <section>
+            <nav class="navbar navbar-expand-sm navbar-light badge-light" id="navbar">
+                
+              <img class="navbar-brand"  style="height: 4rem;" src="assets/images/1.png" alt=""  />
+        
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="container-fluid "></div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-5 mb-lg-0 form-text navbar-dark ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html" style= "text-align: center">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pag_1.html" style= "text-align: center">Cursos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html" style= "text-align: center"> Login</a>
+                            </li>
+                        </ul>                        
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <section>
+            <section>
+                <div class="container" >
+                    <h2>Cursos</h2>
+                </div>
+        
+                <div class="row container" >
+                    <div class="col-sm-5">
+                        
+                    </div>
+                    <div class="col-sm-3" >
+                        <ul class="pagination paginacion">
+                            <li class="page-item"><a class="page-link" onclick="pag_1()" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" onclick="pag_1()" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" onclick="pag_2()" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" onclick="pag_2()" href="#">Next</a></li>
+                          </ul>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>
+                  <div id="pag-1">
+                  <div class="card-deck row">
+                    <div class="col-sm-2"></div>
+                    <div class="card col-sm-2">
+                      <img src="assets/images/seg 1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        
+                        <h5><p><a class="card-title" onclick="curso_1()" >Seguridad basica 1</a></p></h5>
+                        <ul>
+                          <li>Tema 1</li>
+                          <li>Tema 2</li>
+                          <li>Tema 3</li>
+                        </ul> 
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">4 semanas</small>
+                      </div>
+                    </div>
+                    <div class="card col-sm-2">
+                      <img src="assets/images/seg 2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5><p><a class="card-title" onclick="curso_2()" >Seguridad basica 2 </a></p></h5>
+                        <ul>
+                          <li>Tema 1</li>
+                          <li>Tema 2</li>
+                          <li>Tema 3</li>
+                        </ul>  
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">4 semanas</small>
+                      </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                  </div>
+                </div>
+                  <!-- //////////////////////////////////////////////////////////////  -->
+                  <div id="pag-2" style="display:none">
+                    <div  class="card-deck row">
+                      <div class="col-sm-2"></div>
+                      <div class="card col-sm-2">
+                        <img src="assets/images/redes.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"  onclick="curso_3()">Redes Informaticas</h5>
+                          <ul>
+                            <li>Tema 1</li>
+                            <li>Tema 2</li>
+                            <li>Tema 3</li>
+                          </ul> 
+                        </div>
+                        <div class="card-footer">
+                          <small class="text-muted">7 semanas</small>
+                        </div>
+                      </div>
+                      <div class="col-sm-2"></div>
+                    </div>
+                  </div>
+                </section>
+        </section>
+
+        <section>
+            <script src="assets/web/assets/jquery/jquery.min.js"></script>
+            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="assets/parallax/jarallax.min.js"></script>
+            <script src="assets/theme/js/script-cursos.js"></script>
+        </section>
+    </body>
+</html>

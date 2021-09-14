@@ -1,0 +1,277 @@
+<!doctype html>
+ <!-- ////////////////////////////////////////////////////////////// REPORTE //////////////////////////////////////////////////////////////// -->
+<html>
+    <head>
+        <title>Registro</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="assets/theme/css/style.css">
+        <link rel="stylesheet" href="assets/theme/css/style-reg.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="assets/theme/js/script-reg.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/parallax/jarallax.min.js"></script>
+        <script src="assets/theme/js/script.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    </head>
+    <body >
+        <section>
+            <nav class="navbar navbar-expand-sm navbar-light badge-light" id="navbar">            
+                <img class="navbar-brand"  style="height: 4rem;" src="assets/images/1.png" alt=""  />
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="container-fluid mbr-overlay "></div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="media-content align-right">
+                            <ul class="navbar-nav me-auto mb-5 mb-lg-0 form-text navbar-dark ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html" style= "text-align: center">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pag_1.html" style= "text-align: center">Cursos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="login.html" style= "text-align: center"> Login</a>
+                                </li>
+                            </ul>                        
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <div id="DB"  value="XML"></div>
+        <div id="container" >
+            <div id="navcontainer">
+                <ul id="globalnav">
+                    <li><a href="#" onclick="altas()">Inscripción</a></li>
+                    <li><a href="#" onclick="bajas()">Baja</a></li>
+                    <li><a href="#" onclick="cambios()">Modificación</a></li>
+                    <li><a href="#" onclick="buscar()">Busqueda</a></li>
+                    <li><a href="#" onclick="reporte()">Reporte</a></li>
+                </ul>
+            </div>
+            <!-- ////////////////////////////////////////////////////////////// INSCRIPCION //////////////////////////////////////////////////////////// -->
+            <div id="altas"> 
+                <div ng-app="">
+                    <h2>Registro</h2>
+                    <div class="body">
+
+                        <b>1. Datos Generales</b><br><br>
+							
+						<input type="checkbox" id="checkB1" name="Directivo" value="Directivo">
+							<label for="checkB1">Es estudiante</label><br>
+
+                        <div class="input-group mb-auto row g-3">
+                            &nbsp &nbsp <span class="input-group-text" id="basic-addon1">Fecha</span>
+                            <input type="date" class="form-control col-4" placeholder="date" aria-label="date" aria-describedby="basic-addon1" maxlength="10" ng-model="date" id="fecha">
+                        </div> <br>
+
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <label for="clave" class="form-label"> Nombre de Usuario</label>
+                                    <input type="text" class="form-control" id="clave" ng-model="clave" placeholder="clave">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control"  ng-model="nombre" id="nombre" placeholder="Nombre">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="apPaterno" class="form-label">Apellido Paterno</label>
+                                    <input type="text" class="form-control" ng-model="apPaterno"  id="apPaterno" placeholder="Apellido Paterno">
+                                </div>
+                                <div class="col-4">
+                                    <label for="apMaterno" class="form-label">Apellido Materno</label>
+                                    <input type="text" class="form-control" ng-model="apMaterno"  id="apMaterno" placeholder="Apellido Materno">
+                                </div>
+                            </div>
+                        </form>
+                            
+                        <br>
+                        
+                        Sexo:
+                        <table>
+                            <tr><td><input type="radio"  ng-model="sexoM"  id="sexoM" name="sexo" value="Masculino"/>Masculino</td>
+                            <td><input type="radio"  ng-model="sexoF"  id="sexoF" name="sexo" value="Femenino"/>Femenino</td></tr>
+                        </table>
+                        <br>
+                        Estudios: <br>
+                        <select ng-model="edoCivil" id="edoCivil">
+                            <option value="SE">Sin Estudios</option>
+                            <option value="Primaria">Primaria</option>
+                            <option value="Secundaria">Secundaria</option>
+                            <option value="Bachillerato">Bachillerato</option>
+                            <option value="Licenciatura">Licenciatura</option>
+                            <option value="Posgrado">Posgrado</option>
+                        </select><br><br>
+                    </div>
+					<script>
+					$(document).ready(function(){
+						$("button").click(function(){
+							$("#RevisionD").fadeToggle("slow");
+						});
+					});
+					</script>
+					<button class="btn btn-outline-info">Revisa tus datos una ultima vez!</button><br><br>
+					<br>
+					<div id="RevisionD" style="display:none;">
+						<h2>Revisa que los datos esten correctos</h2>
+						<p>Fecha: {{ date }}</p><br>
+						<p>Nombre de Usuario: {{ clave }}</p><br>
+						<p>Nombre: {{ nombre }}</p><br>
+						<p>Apellido Paterno: {{ apPaterno }}</p><br>
+						<p>Apellido Materno: {{ apMaterno }}</p><br>
+						<p>Estudios:: {{ edoCivil }}</p><br>
+						<br><br>
+					</div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="submit" class="btn btn-outline-success" onclick="sendData()">SUBMIT</button>
+                    </div>
+                    <br><br><br>
+                </div>
+            </div>
+            <!-- ////////////////////////////////////////////////////////////// BAJA /////////////////////////////////////////////////////////////////// -->
+
+        
+            <div id="bajas" style="display:none">
+                <h2>Baja de empleados</h2>
+                <br>
+                <div class="body">
+            
+
+                    <br><br>
+                    <div class="input-group mb-3 ">
+                        <span class="input-group-text" id="basic-addon1">Nombre de Usuario</span>
+                        <input type="text" class="form-control col-md-6" placeholder="Introduce el Nombre de Usuario dar de baja" aria-label="Username" aria-describedby="basic-addon1" id="claveB">
+                    </div>
+                    <button class="button btn btn-outline-success" type="submit" onclick="deleteData()">DAR DE BAJA</button>
+
+                </div>
+            </div>
+            <!-- ////////////////////////////////////////////////////////////// MODIFICACION ///////////////////////////////////////////////////////////  -->
+
+
+            <div id="cambios" style="display:none">
+                <br><br>
+                <h2>Cambios en Informacion de Usuario</h2>
+                <br>
+                
+                <div class="input-group mb-3 ">
+                    <span class="input-group-text" id="basic-addon1">Nombre de Usuario</span>
+                    <input type="text" class="form-control col-md-6" placeholder="Introduce el Nombre de Usuario a modificar" aria-label="Username" aria-describedby="basic-addon1" id="buscarC">
+                </div>
+                <button class="button btn btn-outline-success" type="submit" onclick="changeData()">Buscar</button>         
+                <br> <br>
+
+                <div class="body" id="formCambios" style="display:none">
+                    <div class="body">
+                        <p>Modifica los campos:</p>
+						<input type="checkbox" id="checkB1C" name="Directivo" value="Directivo">
+								<label for="checkB1C">Es estudiante?</label><br>
+
+                            <div class="input-group mb-auto row g-3">
+                                &nbsp &nbsp <span class="input-group-text" id="basic-addon1">Fecha</span>
+                                <input type="date" class="form-control col-4" placeholder="date" aria-label="date" aria-describedby="basic-addon1" maxlength="10" ng-model="date" id="fechaC">
+                            </div> <br>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <label for="clave" class="form-label"> Nombre de Usuario </label>
+                                    <input type="text" class="form-control" id="claveC" maxlength="6" ng-model="clave">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control"  id="nombreC" placeholder="Nombre">
+                                </div>
+								<div class="col-md-4">
+                                    <label for="apPaternoc" class="form-label">Apellido Paterno</label>
+                                    <input type="text" class="form-control"  id="apPaternoC" placeholder="Apellido Paterno">
+                                </div>
+                                <div class="col-4">
+                                    <label for="apMaterno" class="form-label">Apellido Materno</label>
+                                    <input type="text" class="form-control" id="apMaternoC" placeholder="Apellido Materno">
+                                </div>
+                            </div>
+                        </form>
+                            
+                        <br>
+                        
+                        Sexo:
+                        <table>
+                            <tr><td><input type="radio"  ng-model="sexoM"  id="sexoMC" name="sexo" value="Masculino"/>Masculino</td>
+                            <td><input type="radio"  ng-model="sexoF"  id="sexoFC" name="sexo" value="Femenino"/>Femenino</td></tr>
+                        </table>
+                        <br>
+
+                        Estudios: <br>
+                        <select ng-model="edoCivil" id="edoCivilC">
+                            <option value="SE">Sin Estudios</option>
+                            <option value="Primaria">Primaria</option>
+                            <option value="Secundaria">Secundaria</option>
+                            <option value="Bachillerato">Bachillerato</option>
+                            <option value="Licenciatura">Licenciatura</option>
+                            <option value="Posgrado">Posgrado</option>
+                        </select><br><br>
+                        <button class="button" type="submit" onclick="updateData()">Actualizar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ////////////////////////////////////////////////////////////// BUSQUEDA /////////////////////////////////////////////////////////////// -->
+            
+            
+            <div id="buscar" style="display:none">
+                <h2>Consulta de Usuario</h2>    
+
+                <form class="row gy-2 gx-3 align-items-center"> 
+                    <div class="col-auto">
+                        <label class="visually-hidden" for="textoBusqueda">Seleccione Campo</label>
+                        <label class="visually-hidden" for="campoBusqueda"></label>
+                        <select class="form-select" id="campoBusqueda">
+                          <option value="nivel">Estudiantes</option>
+						  <option value="clave">Nombre de Usuario</option>
+                          <option value="nombre">Nombre</option>
+						  <option value="apPaterno">Apellido Paterno</option>
+						  <option value="apMaterno">Apellido Materno</option>
+                          <option value="sexo">Sexo</option>
+                          <option value="edoCivil">Por grado de estudios</option>
+                        </select>
+                      </div>  
+                    <div class="col-auto">
+                      
+                      <div class="input-group">
+                        <div class="input-group-text">Buscar:</div>
+                        <input type="text" class="form-control" id="textoBusqueda" placeholder="Buscar">
+                      </div>
+                    </div>
+                </form>
+                <br> <br>
+                <button class="button btn btn-outline-success" type="submit" onclick="busqueda()">HACER BUSQUEDA</button>
+                <br>
+                <p id="message"></p>
+                <table id="resultadoBusqueda" class="tabla"></table>
+            </div>
+            <!-- ////////////////////////////////////////////////////////////// REPORTE //////////////////////////////////////////////////////////////// -->
+
+            <div id="reporte" style="display:none">
+                <h2>Reporte de Usuarios </h2>
+                <br>
+                <table id="tablaReporte" class="tabla">
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
